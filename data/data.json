@@ -2,7 +2,7 @@
     "groups": [
         {
             "active": true,
-            "image": "data/images/groups/GDGNL.png",
+            "image": "data/images/groups/gdgnl.png",
             "name": "GDG NL",
             "meetup": "https://www.meetup.com/Google-Developer-Group-Netherlands/"
         },
@@ -22,7 +22,7 @@
         },
         {
             "active": true,
-            "image": "data/images/groups/WTMNL.png",
+            "image": "data/images/groups/wtmnl.png",
             "meetup": "https://www.meetup.com/Women-Techmakers-The-Netherlands/",
             "name": "WTM NL"
         }
