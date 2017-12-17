@@ -1,0 +1,148 @@
+<!--
+@license
+Copyright (c) 2016 The GDG Spain Authors. All rights reserved.
+This code may only be used under the MIT style license found at http://gdg.es/LICENSE.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-layout/app-grid/app-grid-style.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="../app-elements/gdgspain-cascaded-animation.html">
+<link rel="import" href="sponsor-item.html">
+
+<dom-module id="page-sponsors-list">
+  <template>
+    <style include="app-grid-style">
+      :host {
+        --app-grid-columns: 1;
+        --app-grid-gutter: var(--margin-size);
+
+        position: relative;
+
+        display: block;
+      }
+
+      .sponsors-list {
+        margin-right: -var(--app-grid-gutter);
+        margin-bottom: -var(--app-grid-gutter);
+        padding: 0;
+
+        list-style: none;
+      }
+
+      .sponsors-list li {
+        will-change: transform;
+      }
+
+      .sponsors-list a {
+        display:block;
+
+        text-decoration: none;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .spinner-container {
+        @apply --layout-vertical;
+        @apply --layout-center;
+
+        position: absolute;
+        top: 0;
+
+        width: 100%;
+      }
+
+      @media (min-width: 500px) {
+        :host {
+          --app-grid-columns: 2;
+        }
+      }
+
+      @media (min-width: 750px) {
+        :host {
+          --app-grid-columns: 3;
+        }
+      }
+    </style>
+    <div class="spinner-container">
+      <paper-spinner active="[[activeSpinner]]"></paper-spinner>
+    </div>
+
+    <ul id="list" class="sponsors-list app-grid">
+      <template
+          id="sponsors"
+          is="dom-repeat"
+          items="[[sponsors]]"
+          as="sponsor"
+          on-dom-change="_domChanged"
+          filter="{{_computeFilter(filterSponsors)}}">
+        <li>
+          <sponsor-item sponsor="[[sponsor]]"></sponsor-item>
+        </li>
+      </template>
+    </ul>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-sponsors-list',
+
+      properties: {
+        sponsors: {
+          type: Array
+        },
+
+        activeSpinner: {
+          type: Boolean,
+          value: true
+        },
+
+        filterSponsors: {
+          type: String
+        }
+      },
+
+      behaviors: [
+        Polymer.GDGSpainCascadedAnimation
+      ],
+
+      _domChanged: function() {
+        if (this.sponsors.length > 0) {
+          var nodes = Polymer.dom(this.$.list).querySelectorAll('li');
+          this.animationConfig['entry'][1].nodes = nodes;
+          this.playAnimation('entry');
+          this.set('activeSpinner', false);
+        } else {
+          this.set('activeSpinner', true);
+        }
+      },
+
+      _computeFilter: function(searchText) {
+        if (!searchText) {
+          return null;
+        } else {
+          return function(sponsor) {
+            var sponsorName = sponsor.name.toLowerCase();
+
+            return sponsorName.indexOf(searchText.toLowerCase()) !== -1;
+          };
+        }
+      },
+
+      attached: function() {
+        this._updateGridStyles = this._updateGridStyles || function() {
+          this.updateStyles();
+        }.bind(this);
+
+        window.addEventListener('resize', this._updateGridStyles);
+      },
+
+      detached: function() {
+        window.removeEventListener('resize', this._updateGridStyles);
+      }
+    });
+  </script>
+</dom-module>

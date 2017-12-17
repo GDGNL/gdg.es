@@ -11,9 +11,9 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 <link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
 <link rel="import" href="../app-elements/gdgspain-animate-page.html">
 <link rel="import" href="../app-styles.html">
-<link rel="import" href="page-groups-list.html">
+<link rel="import" href="page-sponsors-list.html">
 
-<dom-module id="page-groups">
+<dom-module id="page-sponsors">
   <template>
     <style include="app-styles">
       :host {
@@ -34,30 +34,29 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
     </style>
 
     <firebase-query
-        path="/groups"
-        order-by-child="active"
-        equal-to="true"
-        data="{{groups}}">
+        path="/sponsors"
+        order-by-child="name"
+        data="{{sponsors}}">
     </firebase-query>
 
     <app-indexeddb-mirror
-        key="groups"
-        data="{{groups}}"
-        persisted-data="{{persistedGroups}}">
+        key="sponsors"
+        data="{{sponsors}}"
+        persisted-data="{{persistedSponsors}}">
     </app-indexeddb-mirror>
 
     <header>
-      <h1>Groups</h1>
+      <h1>Sponsors</h1>
     </header>
 
     <div id="transformedContent">
-      <page-groups-list groups="[[persistedGroups]]"></page-groups-list>
+        <page-sponsors-list sponsors="[[persistedSponsors]]"></page-sponsors-list>
     </div>
   </template>
 
   <script>
     Polymer({
-      is: 'page-groups',
+      is: 'page-sponsors',
 
       properties: {
         visible: {
@@ -73,7 +72,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
       _visibleChanged: function(visible) {
         if (visible) {
           this.fire('change-section', {
-            title: 'Groups - GDG NL'
+            title: 'Sponsors - GDG NL'
           });
         }
       }

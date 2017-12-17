@@ -1,0 +1,147 @@
+{
+    "groups": [
+        {
+            "active": true,
+            "image": "data/images/groups/GDGNL.png",
+            "name": "GDG NL",
+            "meetup": "https://www.meetup.com/Google-Developer-Group-Netherlands/"
+        },
+        {
+            "active": true,
+            "facebook": "https://www.facebook.com/dutchaug",
+            "image": "data/images/groups/DutchAUG.png",
+            "meetup": "https://www.meetup.com/dutch-aug/",
+            "name": "Dutch Android User Group",
+            "twitter": "https://twitter.com/dutchaug"
+        },
+        {
+            "active": true,
+            "image": "data/images/groups/GDGCloud.png",
+            "meetup": "https://www.meetup.com/Google-Developer-Group-Netherlands/",
+            "name": "GDG Cloud NL"
+        },
+        {
+            "active": true,
+            "image": "data/images/groups/WTMNL.png",
+            "meetup": "https://www.meetup.com/Women-Techmakers-The-Netherlands/",
+            "name": "WTM NL"
+        }
+    ],
+    "sponsors": [
+        {
+            "name": " Become a sponsor",
+            "image": "data/images/sponsors/_becomesponsor.png",
+            "web": "/contact"
+        },
+        {
+            "name": "Albert Heijn",
+            "image": "data/images/sponsors/ah.png",
+            "web": "http://ah.nl/itjobs"
+        },
+        {
+            "name": "Bamtech Media",
+            "image": "data/images/sponsors/bamtechmedia.png",
+            "web": "https://www.bamtechmedia.com/"
+        },
+        {
+            "name": "Bol.com",
+            "image": "data/images/sponsors/bolcom.png",
+            "web": "http://techlab.bol.com/"
+        },
+        {
+            "name": "Code Orange",
+            "image": "data/images/sponsors/codeorange.png",
+            "web": "https://code-orange.nl/"
+        },
+        {
+            "name": "Darwin Recruitment",
+            "image": "data/images/sponsors/darwin.png",
+            "web": "http://www.darwinrecruitment.com/"
+        },
+        {
+            "name": "Google",
+            "image": "data/images/sponsors/google.png",
+            "web": "https://www.google.com.ua/intl/en/about/"
+        },
+        {
+            "name": "ING",
+            "image": "data/images/sponsors/ing.png",
+            "web": "https://www.ing.nl/"
+        },
+        {
+            "name": "JDriven",
+            "image": "data/images/sponsors/jdriven.png",
+            "web": "https://www.jdriven.com/"
+        },
+        {
+            "name": "Luminis",
+            "image": "data/images/sponsors/luminis.png",
+            "web": "https://arnhem.luminis.eu/"
+        },
+        {
+            "name": "M2Mobi",
+            "image": "data/images/sponsors/m2mobi.png",
+            "web": "https://www.m2mobi.com/"
+        },
+        {
+            "name": "Mangrove",
+            "image": "data/images/sponsors/mangrove.png",
+            "web": "https://www.mangrove.com/"
+        },
+        {
+            "name": "Minor Programmeren",
+            "image": "data/images/sponsors/minor-programmeren.png",
+            "web": "http://www.mprog.nl/"
+        },
+        {
+            "name": "Nedap",
+            "image": "data/images/sponsors/nedap.png",
+            "web": "https://nedap.com/"
+        },
+        {
+            "name": "Nubis",
+            "image": "data/images/sponsors/nubis.png",
+            "web": "http://nub.is"
+        },
+        {
+            "name": "Q42",
+            "image": "data/images/sponsors/q42.png",
+            "web": "https://www.q42.nl/"
+        },
+        {
+            "name": "Qafe",
+            "image": "data/images/sponsors/qafe.png",
+            "web": "http://www.qafe.com/"
+        },
+        {
+            "name": "Qlouder",
+            "image": "data/images/sponsors/qlouder.png",
+            "web": "http://www.qlouder.com/"
+        },
+        {
+            "name": "Qualogy",
+            "image": "data/images/sponsors/qualogy.png",
+            "web": "http://qualogy.com/"
+        },
+        {
+            "name": "Triple",
+            "image": "data/images/sponsors/triple.png",
+            "web": "https://www.wearetriple.com/"
+        },
+        {
+            "name": "Trivento",
+            "image": "data/images/sponsors/trivento.png",
+            "web": "http://www.triventotouch.nl/"
+        },
+        {
+            "name": "Us Media",
+            "image": "data/images/sponsors/usmedia.png",
+            "web": "http://www.usmedia.nl"
+        },
+        {
+            "name": "Xebia",
+            "image": "data/images/sponsors/xebia.png",
+            "web": "http://www.xebia.nl/"
+        }
+    ]
+}

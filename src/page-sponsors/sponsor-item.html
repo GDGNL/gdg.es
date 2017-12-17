@@ -1,0 +1,114 @@
+<!--
+@license
+Copyright (c) 2016 The GDG Spain Authors. All rights reserved.
+This code may only be used under the MIT style license found at http://gdg.es/LICENSE.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../app-icons.html">
+
+<dom-module id="sponsor-item">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      paper-card {
+        width: 100%;
+
+        --paper-card-actions: {
+          @apply --layout-horizontal-reverse;
+
+          border-top: none;
+        };
+
+        --paper-card-header-image-text: {
+          box-sizing: border-box;
+          width: 100%;
+
+          color: #ffffff;
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+        };
+      }
+
+      .social-networks a {
+        display: inline-block;
+
+        text-decoration: none;
+
+        color: inherit;
+
+        /* NOTE: Both values are needed, since some phones require the `transparent` value. */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      paper-icon-button {
+        color: var(--secondary-text-color);
+      }
+    </style>
+
+    <paper-card heading="[[sponsor.name]]" image="[[sponsor.image]]">
+      <div class="card-actions">
+        <div class="social-networks">
+          <template is="dom-if" if="[[sponsor.googlePlus]]">
+            <a href$="[[sponsor.googlePlus]]" target="_blank"
+                tabindex="-1"
+                title$="[[sponsor.name]] en Google+"
+                aria-label$="[[sponsor.name]] en Google+">
+              <paper-icon-button
+                  icon="googlePlus"
+                  hidden$="[[!sponsor.googlePlus]]"></paper-icon-button>
+            </a>
+          </template>
+          <template is="dom-if" if="[[sponsor.web]]">
+            <a href$="[[sponsor.web]]" target="_blank"
+                tabindex="-1"
+                title$="[[sponsor.web]]"
+                aria-label$="[[sponsor.web]]">
+              <paper-icon-button
+                  icon="web"
+                  hidden$="[[!sponsor.web]]"></paper-icon-button>
+            </a>
+          </template>
+          <template is="dom-if" if="[[sponsor.twitter]]">
+            <a href$="[[sponsor.twitter]]" target="_blank"
+                tabindex="-1"
+                title$="[[sponsor.name]] on Twitter"
+                aria-label$="[[sponsor.name]] on Twitter">
+              <paper-icon-button
+                  icon="twitter"
+                  hidden$="[[!sponsor.twitter]]"></paper-icon-button>
+            </a>
+          </template>
+          <template is="dom-if" if="[[sponsor.facebook]]">
+            <a href$="[[sponsor.facebook]]" target="_blank"
+                tabindex="-1"
+                title$="[[sponsor.name]] on Facebook"
+                aria-label$="[[sponsor.name]] on Facebook">
+              <paper-icon-button
+                  icon="facebook"
+                  hidden$="[[!sponsor.facebook]]"></paper-icon-button>
+            </a>
+          </template>
+        </div>
+      </div>
+    </paper-card>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'sponsor-item',
+
+      properties: {
+        sponsor: {
+          type: Object
+        }
+      }
+    });
+  </script>
+</dom-module>

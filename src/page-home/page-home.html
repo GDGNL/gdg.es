@@ -29,7 +29,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 
         color: white;
         background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                          url('../../images/gdgspain-summit-2015.jpg');
+                          url('../../images/background.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -167,26 +167,26 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 
     <div id="transformedContent">
       <header>
-        <h1>Google Developer Group Spain</h1>
-        <h2>Organización que agrupa a todos los Google Developer Groups de España</h2>
+        <h1>GDG Netherlands</h1>
+        <h2>A view of all the GDG groups who organize meetups in the Netherlands.</h2>
       </header>
 
       <section class="what-are-the-gdgs">
         <div class="section-content">
-          <h3>¿Qué son los GDGs?</h3>
+          <h3>What are GDGs?</h3>
           <div class="section-columns">
             <div class="section-description">
-              <p>Los <strong>Google Developer Groups</strong> (GDGs) son entidades sin ánimo de lucro creadas con el objetivo de mejorar la comunidad de entusiastas tecnológicos y aumentar el conocimiento y las relaciones entre las personas que se dedican a esta área.</p>
+              <p>The <strong> Google Developer Groups </strong> (GDGs) are non-profit entities created with the aim of improving the technological enthusiast community and increasing the knowledge and relationships among people who are dedicated to this area.</p>
             </div>
             <div class="gdg-logo">
               <iron-image src="[[importPath]]../../images/gdg-logo.png" preload></iron-image>
             </div>
           </div>
-          <h3>¿Qué hacemos?</h3>
+          <h3>What do we do?</h3>
           <div class="section-columns">
             <div class="section-description">
-              <p>Creamos eventos, conferencias y talleres en más de treinta puntos de España, con el ánimo de difundir el conocimiento sobre tecnología y mejorar el panorama desarrollador del país. Además, la gran mayoría de estos eventos son <strong>libres y gratuitos</strong>, pues creemos que el conocimiento no debe enfrentarse a mayor barrera que el interés del que quiere aprenderlo.</p>
-              <p>Los GDGs también tienen como objetivo la promoción de las relaciones entre expertos tecnológicos, por lo que colaboramos en la difusión de otras comunidades tecnológicas (GDE, Women Techmakers, Tech & Ladies, Betabeers, etc) para hacer de la tecnología en España un músculo fuerte y activo que contribuya al desarrollo de la sociedad.</p>
+              <p>We create events, conferences and workshops in the Netherlands, with the aim of spreading knowledge about technology and improving the country's development landscape. In addition, the vast majority of these events are <strong> free</strong>, because we believe that knowledge should not face a greater barrier than the interest of those who want to learn it.</p>
+              <p>The GDGs also aim to promote relationships between technology experts, so we collaborate in the spreading of other technological communities (GDE, Women Techmakers, etc) to make technology in the Netherlands a strong muscle and actively contribute to the development within our society.</p>
             </div>
           </div>
         </div>
@@ -195,47 +195,26 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
       <footer>
         <section class="footer-media-links">
           <div class="section-content">
-            <a href="https://twitter.com/GDG_ES"
+            <a href="https://twitter.com/GDG_NL"
                 target="_blank"
-                title="Seguir @GDG_ES en Twitter"
-                aria-label="Seguir GDG Spain en Twitter">
+                title="Follow @GDG_NL on Twitter"
+                aria-label="Follow GDG NL on Twitter">
               <iron-icon icon="twitter"></iron-icon>
-              <span>@GDG_ES</span>
+              <span>@GDG_NL</span>
             </a>
-            <a href="https://github.com/GDGSpain"
+            <a href="https://github.com/GDGNL"
                 target="_blank"
-                title="Seguir /GDGSpain en GitHub"
-                aria-label="Seguir GDG Spain en GitHub">
+                title="Follow /GDGSNL on GitHub"
+                aria-label="Follow /GDGSNL on GitHub">
               <iron-icon icon="github"></iron-icon>
-              <span>/GDGSpain</span>
+              <span>/GDGNL</span>
             </a>
-            <a href="https://www.youtube.com/c/GDGSpain"
+            <a href="https://www.facebook.com/GDGNL"
                 target="_blank"
-                title="Suscribirse /GDGSpain en YouTube"
-                aria-label="Suscribirse GDG Spain en YouTube">
-              <iron-icon icon="youtube"></iron-icon>
-              <span>/GDGSpain</span>
-            </a>
-            <a href="https://www.facebook.com/GDGSpain"
-                target="_blank"
-                title="Seguir /GDGSpain en Facebook"
-                aria-label="Seguir GDG Spain en Facebook">
+                title="Follow /GDGNL on Facebook"
+                aria-label="Follow GDG NL on Facebook">
               <iron-icon icon="facebook"></iron-icon>
-              <span>/GDGSpain</span>
-            </a>
-            <a href="https://instagram.com/GDGSpain"
-                target="_blank"
-                title="Seguir /GDGSpain en Instagram"
-                aria-label="Seguir GDG Spain en Instagram">
-              <iron-icon icon="instagram"></iron-icon>
-              <span>/GDGSpain</span>
-            </a>
-            <a href="https://plus.google.com/+GDGSpain"
-                target="_blank"
-                title="Seguir +GDGSpain en Google+"
-                aria-label="Seguir GDG Spain en Google+">
-              <iron-icon icon="googlePlus"></iron-icon>
-              <span>GDGSpain</span>
+              <span>/GDGNL</span>
             </a>
           </div>
         </section>
@@ -264,7 +243,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
       _visibleChanged: function(visible) {
         if (visible) {
           this.fire('change-section', {
-            title: 'GDG Spain - Google Developer Groups Spain'
+            title: 'GDG NL - Google Developer Groups Netherlands'
           });
         }
       }

@@ -55,7 +55,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
       .logo-container a {
         display: inline-block;
 
-        width: 173px;
+        width: 256px;
         height: 35px;
       }
 
@@ -67,7 +67,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
       .main-menu {
         --paper-tabs-selection-bar-color: var(--gdg-color-blue);
 
-        width: 335px;
+        width: 380px;
         height: 100%;
       }
 
@@ -146,9 +146,9 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         query-matches="{{smallScreen}}"></iron-media-query>
 
     <firebase-app
-        auth-domain="gdg-es-develop.firebaseapp.com"
-        database-url="https://gdg-es-develop.firebaseio.com"
-        api-key="AIzaSyAIF5ALCsCSwKZhPqIIfwSOQPRrswB1Ovc"></firebase-app>
+        auth-domain="gdgnl-aaa24.firebaseapp.com"
+        database-url="https://gdgnl-aaa24.firebaseio.com"
+        api-key="AIzaSyAY0AP6f0cNGuVwXtZYtYl9gSCf7MHcLm0"></firebase-app>
 
     <app-header-layout>
       <app-header condenses reveals effects="waterfall" role="navigation">
@@ -161,8 +161,8 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
               aria-label="Sections"></paper-icon-button>
 
           <div class="logo-container">
-            <a href="[[rootPath]]" aria-label="GDG Spain home">
-              <iron-image src="[[importPath]]../images/gdgspain-logo.png" preload sizing="cover"></iron-image>
+            <a href="[[rootPath]]" aria-label="GDG NL home">
+              <iron-image src="[[importPath]]../images/gdgnl-logo.png" preload sizing="cover"></iron-image>
             </a>
           </div>
 
@@ -172,20 +172,29 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
                 attr-for-selected="name"
                 class="main-menu">
               <paper-tab name="home" link tabindex="-1">
-                <a href="[[rootPath]]">Inicio</a>
+                <a href="[[rootPath]]">Home</a>
               </paper-tab>
               <paper-tab name="groups" link tabindex="-1">
-                <a href="[[rootPath]]groups">Grupos</a>
+                <a href="[[rootPath]]groups">Groups</a>
+              </paper-tab>
+              <paper-tab name="blog" link tabindex="-1">
+                <a href="[[rootPath]]blog">Blog</a>
+              </paper-tab>
+              <paper-tab name="sponsors" link tabindex="-1">
+                <a href="[[rootPath]]sponsors">Sponsors</a>
+              </paper-tab>
+              <paper-tab name="contact" link tabindex="-1">
+                <a href="[[rootPath]]contact">Contact</a>
               </paper-tab>
               <!--<paper-tab name="events" link tabindex="-1">
                 <a href="[[rootPath]]events">Eventos</a>
               </paper-tab>-->
-              <paper-tab name="blog" link tabindex="-1">
+              <!-- <paper-tab name="blog" link tabindex="-1">
                 <a href="http://blog.gdg.es" target="_blank">Blog</a>
               </paper-tab>
               <paper-tab name="branding" link tabindex="-1">
                 <a href="[[rootPath]]branding">Branding</a>
-              </paper-tab>
+              </paper-tab> -->
             </paper-tabs>
           </template>
         </app-toolbar>
@@ -198,6 +207,9 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
           fallback-selection="404">
         <page-home name="home"></page-home>
         <page-groups name="groups"></page-groups>
+        <page-blog name="blog"></page-blog>
+        <page-sponsors name="sponsors"></page-sponsors>
+        <page-contact name="contact"></page-contact>
         <!--<page-events name="events"></page-events>-->
         <page-branding name="branding"></page-branding>
         <page-404 name="404"></page-404>
@@ -213,11 +225,12 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
               attr-for-selected="name"
               class="drawer-menu"
               role="navigation">
-            <a name="home" href="[[rootPath]]">Inicio</a>
-            <a name="groups" href="[[rootPath]]groups">Grupos</a>
+            <a name="home" href="[[rootPath]]">Home</a>
+            <a name="groups" href="[[rootPath]]groups">Groups</a>
             <!--<a name="events" href="[[rootPath]]events">Eventos</a>-->
-            <a name="blog" href="http://blog.gdg.es">Blog</a>
-            <a name="branding" href="[[rootPath]]branding">Branding</a>
+            <a name="blog" href="[[rootPath]]blog">Blog</a>
+            <a name="sponsors" href="[[rootPath]]sponsors">Sponsors</a>
+            <a name="contact" href="[[rootPath]]contact">Contact</a>
           </iron-selector>
         </div>
       </app-drawer>

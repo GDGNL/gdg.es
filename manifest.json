@@ -1,7 +1,7 @@
 {
-  "name": "GDG Spain",
-  "short_name": "GDG Spain",
-  "description": "Organización que agrupa a todos los Google Developer Groups de España.",
+  "name": "GDG Netherlands",
+  "short_name": "GDG NL",
+  "description": "A view of all the GDG groups who organize meetups in the Netherlands.",
   "start_url": "./?utm_source=homescreen",
   "display": "standalone",
   "theme_color": "#4285f4",

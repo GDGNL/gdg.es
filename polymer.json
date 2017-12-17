@@ -6,6 +6,9 @@
     "src/page-branding/page-branding.html",
     "src/page-events/page-events.html",
     "src/page-groups/page-groups.html",
+    "src/page-blog/page-blog.html",
+    "src/page-sponsors/page-sponsors.html",
+    "src/page-contact/page-contact.html",
     "src/page-home/page-home.html"
   ],
   "sources": [
