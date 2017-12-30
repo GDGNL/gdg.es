@@ -1,0 +1,173 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../app-icons.html">
+
+<dom-module id="blog-item">
+    <template>
+        <style>
+            :host {
+                display: block;
+                margin-bottom: 16px;
+            }
+
+            .post {
+                @apply(--layout-vertical);
+                @apply(--layout-justified);
+                width: 100% !important;
+                height: auto;
+                text-decoration: none;
+                padding: 8px 8px 0px 8px;
+                margin-bottom: 8px;
+            }
+
+            .item {
+                @apply(--layout-horizontal);
+                @apply(--layout-justified);
+                width: 100% !important;
+                height: auto;
+                text-decoration: none;
+            }
+
+            .text {
+                @apply(--layout-vertical);
+                @apply(--layout-justify-start);
+            }
+
+            .image {
+                height: auto;
+                background: no-repeat 50% 50%;
+                opacity: 0.7;
+                transition: opacity 0.5s;
+                align-self: center;
+                width: 360px;
+                height: 200px;
+            }
+
+            .title {
+                @apply(--layout-horizontal);
+                @apply(--layout-start-center);
+                padding: 12px;
+                min-height: 20px;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: left;
+                letter-spacing: 0.8px;
+                line-height: 1.05;
+                color: #000;
+                text-decoration: none;
+            }
+
+            .posted {
+                @apply(--layout-horizontal);
+                @apply(--layout-start-center);
+                padding-left: 12px;
+                font-size: 12px;
+                font-weight: 300;
+                text-align: left;
+                letter-spacing: 0.8px;
+                line-height: 1.05;
+                color: #000;
+                text-decoration: none;
+            }
+
+            .brief {
+                margin-right: 32px;
+                padding-left: 12px;
+            }
+
+            .divider {
+                background: #AAA;
+                width: 100% !important;
+                height: 1px;
+            }
+
+            .icons {
+                height: auto;
+                @apply(--layout-horizontal);
+                @apply(--layout-end-justified);
+            }
+
+            paper-icon-button {
+                color: #737373;
+            }
+
+            @media (max-width: 600px) {
+                .posts {
+                    @apply(--layout-vertical);
+                }
+
+                .art {
+                    @apply(--layout-horizontal);
+                    @apply(--layout-center-justified);
+                }
+                .item {
+                    @apply(--layout-wrap);
+                }
+
+                .image {
+                    width: 260px;
+                    height: 140px;
+                }
+            }
+
+
+            @media (max-width: 960px) {
+                .post {
+                    width: 100% !important;
+                    height: var(--grid-item-height) !important;
+                    margin: var(--grid-gutter) 0;
+                }
+            }
+
+            @media (min-width: 961px) {
+                .post:hover .image {
+                    opacity: 1;
+                }
+            }
+        </style>
+        <paper-card class="post">
+            <div class="header">
+                <div class="title" href$="/blog/posts/[[post.id]]/" class="post" cascaded>[[post.title]]</div>
+                <div class="posted">[[_toLocaleDate(post.posted)]]</div>
+            </div>
+            <div class="item">
+                <div class="text">
+                    <p class="brief">[[post.brief]]</p>
+                </div>
+                <div image="art">
+                    <iron-image class="image" src="[[post.image]]" style$="background:[[post.primaryColor]];" sizing="contain" preload fade></iron-image>
+                </div>
+            </div>
+            <template is="dom-if" if="[[_hasLinks(post)]]">
+                <div class="links">
+                    <div class="divider"></div>
+                    <div class="icons">
+                        <template is="dom-repeat" items="[[post.links]]" as="link">
+                            <a href$="[[link.url]]" target="_blank" rel="noopener noreferrer">
+                                <paper-icon-button icon="[[link.icon]]"></paper-icon-button>
+                            </a>
+                        </template>
+                    </div>
+            </template>
+
+        </paper-card>
+    </template>
+    <script>
+        Polymer({
+            is: "blog-item",
+            properties: {
+                post: {
+                    type: Object
+                }
+            },
+            _toLocaleDate: function (posted) {
+                return new Date(posted).toLocaleString('nl-NL', { "month": "long", "day": "numeric", "year": "numeric" })
+            },
+            _hasLinks: function (post) {
+                return post.hasOwnProperty("links");
+            }
+        })
+    </script>
+</dom-module>

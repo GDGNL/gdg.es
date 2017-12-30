@@ -1,0 +1,69 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="blog-item.html">
+
+
+<dom-module id="blog-list">
+
+  <template>
+
+    <style include="app-styles">
+      :host {
+        display: block;
+      }
+
+      .posts-container {
+        @apply(--layout-vertical);
+      }
+
+      @media (max-width: 600px) {
+        .posts-container {
+          padding: 0 var(--grid-gutter);
+        }
+      }
+
+
+      @media (max-width: 960px) {
+        .posts-container {
+          max-width: none;
+        }
+      }
+    </style>
+
+    <div class="container posts-container">
+      <template is="dom-repeat" items="[[posts]]" as="post" on-dom-change="updateCascadedNodes">
+        <blog-item post="[[post]]"></blog-item>
+      </template>
+    </div>
+
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+
+      Polymer({
+
+        is: 'blog-list',
+
+        properties: {
+          posts: {
+            type: Array
+          }
+        },
+        behaviors: [
+          Polymer.GDGSpainAnimatePage
+        ]
+
+      });
+
+    }());
+  </script>
+
+</dom-module>

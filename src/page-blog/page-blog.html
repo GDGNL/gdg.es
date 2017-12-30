@@ -10,7 +10,10 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
 <link rel="import" href="../app-elements/gdgspain-animate-page.html">
+<link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../../bower_components/neon-animation/neon-animated-pages.html">
 <link rel="import" href="../app-styles.html">
+<link rel="import" href="blog-list.html">
 
 <dom-module id="page-blog">
   <template>
@@ -32,25 +35,13 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
       }
     </style>
 
-    <firebase-query
-        path="/groups"
-        order-by-child="active"
-        equal-to="true"
-        data="{{groups}}">
-    </firebase-query>
-
-    <app-indexeddb-mirror
-        key="groups"
-        data="{{groups}}"
-        persisted-data="{{persistedGroups}}">
-    </app-indexeddb-mirror>
+    <iron-ajax auto url="[[postsSource]]" handle-as="json" on-response="_reversePosts"></iron-ajax>
 
     <header>
       <h1>Blog</h1>
     </header>
 
-    <div id="transformedContent">
-    </div>
+    <blog-list posts=[[posts]]></blog-list>
   </template>
 
   <script>
@@ -61,19 +52,29 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         visible: {
           type: Boolean,
           observer: '_visibleChanged'
+        },
+        postsSource: {
+          type: String,
+          value: 'data/blog.json'
+        },
+        posts: {
+          type: Array
         }
       },
 
       behaviors: [
         Polymer.GDGSpainAnimatePage
       ],
-
-      _visibleChanged: function(visible) {
+      _visibleChanged: function (visible) {
         if (visible) {
           this.fire('change-section', {
             title: 'Blog - GDG NL'
           });
         }
+      },
+      _reversePosts: function (response) {
+        this.posts = response.detail.response.reverse();
+        this.notifyPath('posts')
       }
     });
   </script>
