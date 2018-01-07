@@ -9,6 +9,7 @@
     "src/page-blog/page-blog.html",
     "src/page-sponsors/page-sponsors.html",
     "src/page-contact/page-contact.html",
+    "src/page-contact/page-conduct.html",
     "src/page-home/page-home.html"
   ],
   "sources": [

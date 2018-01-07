@@ -1,0 +1,83 @@
+<!--
+@license
+Copyright (c) 2017 The GDG NL Authors. All rights reserved.
+This code may only be used under the MIT style license found at http://gdg.nl/LICENSE.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../app-elements/gdgspain-animate-page.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
+<link rel="import" href="../app-styles.html">
+
+<dom-module id="page-conduct">
+  <template>
+    <style include="app-styles">
+      :host {
+        @apply --page-content;
+
+        display: block;
+      }
+
+      header {
+        @apply --layout-horizontal;
+        @apply --layout-center;
+      }
+
+      h1 {
+        @apply --layout;
+        @apply --layout-flex;
+      }
+    </style>
+
+    <header>
+      <h1>Code of Conduct</h1>
+    </header>
+
+    <iron-ajax auto id="ajax" url="[[source]]" handle-as="text" last-response="{{cod}}"></iron-ajax>
+    
+        <div class="container">      
+          <div class="details">
+            <div class="details-item">
+              <marked-element markdown="[[cod]]">
+                <div class="markdown-html"></div>
+              </marked-element>
+            </div>
+          </div>
+        </div>
+
+    <div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-conduct',
+
+      properties: {
+        visible: {
+          type: Boolean,
+          observer: '_visibleChanged'
+        },
+        source: {
+            type: String,
+            value: 'data/posts/code-of-conduct.markdown'
+          }
+      },
+
+      behaviors: [
+        Polymer.GDGSpainAnimatePage
+      ],
+
+      _visibleChanged: function(visible) {
+        if (visible) {
+          this.fire('change-section', {
+            title: 'Code of conduct - GDG NL'
+          });
+        }
+      }
+    });
+  </script>
+</dom-module>
