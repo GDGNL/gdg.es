@@ -10,6 +10,7 @@
     "src/page-sponsors/page-sponsors.html",
     "src/page-contact/page-contact.html",
     "src/page-conduct/page-conduct.html",
+    "src/page-organizers/page-organizers.html",
     "src/page-home/page-home.html"
   ],
   "sources": [
