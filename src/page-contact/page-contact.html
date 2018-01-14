@@ -7,8 +7,15 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../app-elements/gdgspain-animate-page.html">
 <link rel="import" href="../app-styles.html">
 
@@ -21,6 +28,12 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         display: block;
       }
 
+      paper-card {
+        max-width: 690px;
+        margin-bottom: 16px;
+      }
+
+
       header {
         @apply --layout-horizontal;
         @apply --layout-center;
@@ -30,13 +43,58 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         @apply --layout;
         @apply --layout-flex;
       }
+
+      .card-content {
+        @apply --layout-vertical;
+        @apply --layout-flex;
+        @apply --layout-start-justified;
+      }
+
+      .card-actions {
+        @apply --layout;
+        @apply --layout-flex;
+        @apply --layout-end-justified;
+      }
     </style>
+
+    <firebase-query id="invitations" path="/invitationRequests"></firebase-query>
+    <firebase-query id="suggestions" path="/suggestions"></firebase-query>
 
     <header>
       <h1>Contact</h1>
     </header>
 
     <div id="transformedContent">
+      <paper-card heading="Suggestions" image="" elevation="1" animated-shadow="false">
+        <div class="card-content">
+          <p>If you have some great ideas, let us know. Get in touch with us and we'll get in touch with you.</p>
+          <paper-input id="name" label="Name"></paper-input>
+          <paper-input id="emailAddress" label="Email address" type="email"></paper-input>
+          <paper-dropdown-menu id="subject" label="Subject">
+            <paper-listbox slot="dropdown-content">
+              <paper-item>I'd like to speak at an event</paper-item>
+              <paper-item>I'd like to host/sponsor an event</paper-item>
+              <paper-item>Other</paper-item>
+            </paper-listbox>
+          </paper-dropdown-menu>
+          <paper-textarea id="comment" label="Comment"></paper-textarea>
+        </div>
+        <div class="card-actions">
+          <paper-button on-tap="_sendSuggestions">Submit</paper-button>
+        </div>
+      </paper-card>
+
+      <paper-card heading="Slack" image="" elevation="1" animated-shadow="false">
+        <div class="card-content">
+          <p>Join us on Slack! Fill in your name and email address and you'll find an invitation in your inbox.</p>
+          <paper-input id="firstName" label="First name"></paper-input>
+          <paper-input id="lastName" label="Last name"></paper-input>
+          <paper-input id="email" label="Email address" type="email"></paper-input>
+        </div>
+        <div class="card-actions">
+          <paper-button on-tap="_sendInvite">Join</paper-button>
+        </div>
+      </paper-card>
     </div>
   </template>
 
@@ -55,12 +113,41 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         Polymer.GDGSpainAnimatePage
       ],
 
-      _visibleChanged: function(visible) {
+      _visibleChanged: function (visible) {
         if (visible) {
           this.fire('change-section', {
             title: 'Contact - GDG NL'
           });
         }
+      },
+      _sendSuggestions: function (e) {
+        var name = this.$.name.value;
+        var email = this.$.emailAddress.value;
+        var subject = this.$.subject.selectedItemLabel;
+        var comment = this.$.comment.value;
+        this.$.suggestions.ref.push({
+          "name": name,
+          "email": email,
+          "subject": subject,
+          "comment": comment
+        });
+        this.$.name.value = null;
+        this.$.emailAddress.value = null;
+        this.$.subject.selected = undefined;
+        this.$.comment.value = null;
+      },
+      _sendInvite: function (e) {
+        var firstName = this.$.firstName.value;
+        var lastName = this.$.lastName.value;
+        var email = this.$.email.value;
+        var date = new Date().toDateString() + " " + new Date().toLocaleTimeString();
+
+        this.$.invitations.ref.push({
+          "email": email,
+          "firstName": firstName,
+          "lastName": lastName,
+          "date": date
+        });
       }
     });
   </script>
