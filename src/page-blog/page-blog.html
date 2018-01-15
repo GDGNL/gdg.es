@@ -8,6 +8,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 <link rel="import" href="../../bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
 <link rel="import" href="../app-elements/gdgspain-animate-page.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
@@ -33,6 +34,15 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         @apply --layout;
         @apply --layout-flex;
       }
+      a {
+        text-decoration: none;        
+      }
+
+      a paper-button {
+        color: black;
+        text-decoration: none;
+        background: white;
+      }
     </style>
 
     <firebase-query 
@@ -43,7 +53,10 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
     <header>
       <h1>Blog</h1>
     </header>
-
+    <div>
+      <p>Would you like to stay updated? 
+      <a href="https://groups.google.com/forum/?fromgroups#!forum/dutch-gtug" target="_blank">
+        <paper-button raised>Join our mailing list</paper-button></a></p>
     <blog-list posts=[[blogs]]></blog-list>
   </template>
 
