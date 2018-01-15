@@ -1,0 +1,152 @@
+[ {
+  "members" : [ {
+    "name" : "Johan Pelgrim",
+    "photoUrl" : "data/images/organizers/pelgrim.jpg",
+    "socials" : [ {
+      "icon" : "gplus",
+      "link" : "https://plus.google.com/+JohanPelgrim",
+      "name" : "Google+"
+    }, {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/jowipe",
+      "name" : "Twitter"
+    }, {
+      "icon" : "facebook",
+      "link" : "https://www.facebook.com/johan.pelgrim",
+      "name" : "Facebook"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://www.linkedin.com/in/johanpelgrim",
+      "name" : "LinkedIn"
+    }, {
+      "icon" : "website",
+      "link" : "http://codestone.nl/",
+      "name" : "Website"
+    } ],
+    "title" : "",
+    "gdg" : ["GDG DutchAUG"]
+  }, {
+    "name" : "Dennis Geurts",
+    "photoUrl" : "data/images/organizers/geurts.jpg",
+    "socials" : [ {
+      "icon" : "gplus",
+      "link" : "https://plus.google.com/+DennisGeurtsOneOfMany",
+      "name" : "Google+"
+    }, {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/dennisgggg",
+      "name" : "Twitter"
+    }, {
+      "icon" : "facebook",
+      "link" : "https://www.facebook.com/dennis.geurts.58",
+      "name" : "Facebook"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://www.linkedin.com/in/dennisgeurts",
+      "name" : "LinkedIn"
+    } ],
+    "title" : "",
+    "gdg" : ["GDG DutchAUG"]
+  }, {
+    "name" : "Wiebe Elsinga",
+    "photoUrl" : "data/images/organizers/elsinga.jpg",
+    "socials" : [ {
+      "icon" : "gplus",
+      "link" : "https://google.com/+WiebeElsinga",
+      "name" : "Google+"
+    }, {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/welsinga",
+      "name" : "Twitter"
+    }, {
+      "icon" : "facebook",
+      "link" : "https://www.facebook.com/welsinga",
+      "name" : "Facebook"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://www.linkedin.com/in/welsinga",
+      "name" : "LinkedIn"
+    } ],
+    "title" : "",
+    "gdg" : ["GDG DutchAUG"]
+  }, {
+    "name" : "Hugo Visser",
+    "photoUrl" : "data/images/organizers/visser.jpg",
+    "socials" : [ {
+      "icon" : "gplus",
+      "link" : "https://plus.google.com/102164807080986038267",
+      "name" : "Google+"
+    }, {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/botteaap",
+      "name" : "Twitter"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://www.linkedin.com/in/visserh",
+      "name" : "LinkedIn"
+    } ],
+    "title" : "",
+    "gdg" : ["GDG DutchAUG"]
+  }, {
+    "name" : "Jairzinno Henriquez",
+    "photoUrl" : "data/images/organizers/henriquez.jpg",
+    "socials" : [ {
+      "icon" : "gplus",
+      "link" : "https://plus.google.com/+JairzinnoHenriquez",
+      "name" : "Google+"
+    }, {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/Jairzinno",
+      "name" : "Twitter"
+    }, {
+      "icon" : "facebook",
+      "link" : "https://www.facebook.com/jairzinno",
+      "name" : "Facebook"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://www.linkedin.com/in/jairzinno-henriquez-32b6559a",
+      "name" : "LinkedIn"
+    } ],
+    "title" : "",
+    "gdg" : ["GDG DutchAUG", "GDG NL"]
+  }, {
+    "name" : "Rokesh Jankie",
+    "photoUrl" : "data/images/organizers/jankie.jpg",
+    "socials" : [ {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/rjankie",
+      "name" : "Twitter"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://www.linkedin.com/in/rjankie/",
+      "name" : "LinkedIn"
+    } ],
+    "title" : "",
+    "gdg" : ["GDG Cloud"]
+  }, {
+    "name" : "Eliza Camberogiannis",
+    "photoUrl" : "data/images/organizers/camber.png",
+    "socials" : [ {
+      "icon" : "twitter",
+      "link" : "https://twitter.com/elizacamber",
+      "name" : "Twitter"
+    }, {
+      "icon" : "github",
+      "link" : "https://github.com/elizacamber",
+      "name" : "Github"
+    }, {
+      "icon" : "linkedin",
+      "link" : "https://nl.linkedin.com/in/elizacamber",
+      "name" : "LinkedIn"
+    } ],
+    "title" : "",
+    "gdg" : ["WTM", "GDG NL"]
+  } ],
+  "title" : "Active Organizers"
+}, {
+  "members" : [],
+  "title" : "Former Organizers"
+}, {
+  "members" : [],
+  "title" : "GDG Friends"
+} ]
