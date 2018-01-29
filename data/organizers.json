@@ -1,152 +1,466 @@
-[ {
-  "members" : [ {
-    "name" : "Johan Pelgrim",
-    "photoUrl" : "data/images/organizers/pelgrim.jpg",
-    "socials" : [ {
-      "icon" : "gplus",
-      "link" : "https://plus.google.com/+JohanPelgrim",
-      "name" : "Google+"
-    }, {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/jowipe",
-      "name" : "Twitter"
-    }, {
-      "icon" : "facebook",
-      "link" : "https://www.facebook.com/johan.pelgrim",
-      "name" : "Facebook"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://www.linkedin.com/in/johanpelgrim",
-      "name" : "LinkedIn"
-    }, {
-      "icon" : "website",
-      "link" : "http://codestone.nl/",
-      "name" : "Website"
-    } ],
-    "title" : "",
-    "gdg" : ["GDG DutchAUG"]
-  }, {
-    "name" : "Dennis Geurts",
-    "photoUrl" : "data/images/organizers/geurts.jpg",
-    "socials" : [ {
-      "icon" : "gplus",
-      "link" : "https://plus.google.com/+DennisGeurtsOneOfMany",
-      "name" : "Google+"
-    }, {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/dennisgggg",
-      "name" : "Twitter"
-    }, {
-      "icon" : "facebook",
-      "link" : "https://www.facebook.com/dennis.geurts.58",
-      "name" : "Facebook"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://www.linkedin.com/in/dennisgeurts",
-      "name" : "LinkedIn"
-    } ],
-    "title" : "",
-    "gdg" : ["GDG DutchAUG"]
-  }, {
-    "name" : "Wiebe Elsinga",
-    "photoUrl" : "data/images/organizers/elsinga.jpg",
-    "socials" : [ {
-      "icon" : "gplus",
-      "link" : "https://google.com/+WiebeElsinga",
-      "name" : "Google+"
-    }, {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/welsinga",
-      "name" : "Twitter"
-    }, {
-      "icon" : "facebook",
-      "link" : "https://www.facebook.com/welsinga",
-      "name" : "Facebook"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://www.linkedin.com/in/welsinga",
-      "name" : "LinkedIn"
-    } ],
-    "title" : "",
-    "gdg" : ["GDG DutchAUG"]
-  }, {
-    "name" : "Hugo Visser",
-    "photoUrl" : "data/images/organizers/visser.jpg",
-    "socials" : [ {
-      "icon" : "gplus",
-      "link" : "https://plus.google.com/102164807080986038267",
-      "name" : "Google+"
-    }, {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/botteaap",
-      "name" : "Twitter"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://www.linkedin.com/in/visserh",
-      "name" : "LinkedIn"
-    } ],
-    "title" : "",
-    "gdg" : ["GDG DutchAUG"]
-  }, {
-    "name" : "Jairzinno Henriquez",
-    "photoUrl" : "data/images/organizers/henriquez.jpg",
-    "socials" : [ {
-      "icon" : "gplus",
-      "link" : "https://plus.google.com/+JairzinnoHenriquez",
-      "name" : "Google+"
-    }, {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/Jairzinno",
-      "name" : "Twitter"
-    }, {
-      "icon" : "facebook",
-      "link" : "https://www.facebook.com/jairzinno",
-      "name" : "Facebook"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://www.linkedin.com/in/jairzinno-henriquez-32b6559a",
-      "name" : "LinkedIn"
-    } ],
-    "title" : "",
-    "gdg" : ["GDG DutchAUG", "GDG NL"]
-  }, {
-    "name" : "Rokesh Jankie",
-    "photoUrl" : "data/images/organizers/jankie.jpg",
-    "socials" : [ {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/rjankie",
-      "name" : "Twitter"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://www.linkedin.com/in/rjankie/",
-      "name" : "LinkedIn"
-    } ],
-    "title" : "",
-    "gdg" : ["GDG Cloud"]
-  }, {
-    "name" : "Eliza Camberogiannis",
-    "photoUrl" : "data/images/organizers/camber.png",
-    "socials" : [ {
-      "icon" : "twitter",
-      "link" : "https://twitter.com/elizacamber",
-      "name" : "Twitter"
-    }, {
-      "icon" : "github",
-      "link" : "https://github.com/elizacamber",
-      "name" : "Github"
-    }, {
-      "icon" : "linkedin",
-      "link" : "https://nl.linkedin.com/in/elizacamber",
-      "name" : "LinkedIn"
-    } ],
-    "title" : "",
-    "gdg" : ["WTM", "GDG NL"]
-  } ],
-  "title" : "Active Organizers"
-}, {
-  "members" : [],
-  "title" : "Former Organizers"
-}, {
-  "members" : [],
-  "title" : "GDG Friends"
-} ]
+[
+    {
+        "members": [
+            {
+                "gdg": [
+                    "GDG DutchAUG",
+                    "GDG NL"
+                ],
+                "name": "Jairzinno Henriquez",
+                "photoUrl": "data/images/organizers/henriquez.jpg",
+                "socials": [
+                    {
+                        "icon": "gplus",
+                        "link": "https://plus.google.com/+JairzinnoHenriquez",
+                        "name": "Google+"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/Jairzinno",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "facebook",
+                        "link": "https://www.facebook.com/jairzinno",
+                        "name": "Facebook"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/jairzinno-henriquez-32b6559a",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Rokesh Jankie",
+                "photoUrl": "data/images/organizers/jankie.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/rjankie",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/rjankie/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "WTM",
+                    "GDG NL"
+                ],
+                "name": "Eliza Camberogiannis",
+                "photoUrl": "data/images/organizers/camber.png",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/elizacamber",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "github",
+                        "link": "https://github.com/elizacamber",
+                        "name": "Github"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://nl.linkedin.com/in/elizacamber",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Clara Martens Avila",
+                "photoUrl": "data/images/organizers/martensavila.png",
+                "socials": [
+                    {
+                        "icon": "gplus",
+                        "link": "https://plus.google.com/u/0/116517125556849545449",
+                        "name": "Google+"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/canelaguil",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/claramartensavila/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Constantijn Visinescu",
+                "photoUrl": "data/images/organizers/visinescu.jpg",
+                "socials": [
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/cvisinescu/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Matt Feigal",
+                "photoUrl": "data/images/organizers/feigal.jpg",
+                "socials": [
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/mattfeigal",
+                        "name": "LinkedIn"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/mattfgl",
+                        "name": "Twitter"
+                    }
+                ],
+                "title": "Founder"
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Tea Stojanovic",
+                "photoUrl": "data/images/organizers/stojanovic.jpg",
+                "socials": [
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/tea-stojanovic-83309542/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            }
+        ],
+        "title": "Active Organizers"
+    },
+    {
+        "members": [
+            {
+                "gdg": [
+                    "GDG DutchAUG"
+                ],
+                "name": "Johan Pelgrim",
+                "photoUrl": "data/images/organizers/pelgrim.jpg",
+                "socials": [
+                    {
+                        "icon": "gplus",
+                        "link": "https://plus.google.com/+JohanPelgrim",
+                        "name": "Google+"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/jowipe",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "facebook",
+                        "link": "https://www.facebook.com/johan.pelgrim",
+                        "name": "Facebook"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/johanpelgrim",
+                        "name": "LinkedIn"
+                    },
+                    {
+                        "icon": "website",
+                        "link": "http://codestone.nl/",
+                        "name": "Website"
+                    }
+                ],
+                "title": "Founder"
+            },
+            {
+                "gdg": [
+                    "GDG DutchAUG"
+                ],
+                "name": "Dennis Geurts",
+                "photoUrl": "data/images/organizers/geurts.jpg",
+                "socials": [
+                    {
+                        "icon": "gplus",
+                        "link": "https://plus.google.com/+DennisGeurtsOneOfMany",
+                        "name": "Google+"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/dennisgggg",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "facebook",
+                        "link": "https://www.facebook.com/dennis.geurts.58",
+                        "name": "Facebook"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/dennisgeurts",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG DutchAUG"
+                ],
+                "name": "Wiebe Elsinga",
+                "photoUrl": "data/images/organizers/elsinga.jpg",
+                "socials": [
+                    {
+                        "icon": "gplus",
+                        "link": "https://google.com/+WiebeElsinga",
+                        "name": "Google+"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/welsinga",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "facebook",
+                        "link": "https://www.facebook.com/welsinga",
+                        "name": "Facebook"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/welsinga",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG DutchAUG"
+                ],
+                "name": "Hugo Visser",
+                "photoUrl": "data/images/organizers/visser.jpg",
+                "socials": [
+                    {
+                        "icon": "gplus",
+                        "link": "https://plus.google.com/102164807080986038267",
+                        "name": "Google+"
+                    },
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/botteaap",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/visserh",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG DutchAUG"
+                ],
+                "name": "Paul Lammertsma",
+                "photoUrl": "data/images/organizers/lammertsma.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/officesunshine",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/paullammertsma/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Netherlands"
+                ],
+                "name": "Sam Brodkin",
+                "photoUrl": "data/images/organizers/brodkin.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/sambrodkin",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/sambrodkin/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": "Founder"
+            },
+            {
+                "gdg": [
+                    "GDG Netherlands"
+                ],
+                "name": "Hilbrand Bouwkamp",
+                "photoUrl": "data/images/organizers/bouwkamp.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/hilbrand",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/hilbrandbouwkamp/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Netherlands"
+                ],
+                "name": "Henk Jurriens",
+                "photoUrl": "data/images/organizers/jurriens.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/henkjurriens",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/henkjurriens/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title ": "Founder"
+            },
+            {
+                "gdg": [
+                    "GDG Netherlands"
+                ],
+                "name": "Carmen Popoviciu",
+                "photoUrl": "data/images/organizers/popoviciu.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/CarmenPopoviciu",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://linkedin.com/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            },
+            {
+                "gdg": [
+                    "GDG Netherlands"
+                ],
+                "name": "Adolfo Benedetti",
+                "photoUrl": "data/images/organizers/benedetti.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/adben",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/adolfo-benedetti-3077142a/",
+                        "name": "LinkedIn"
+                    }
+                ],
+                "title": ""
+            }
+        ],
+        "title": "Former Organizers"
+    },
+    {
+        "members": [
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Ernest Micklei",
+                "photoUrl": "data/images/organizers/micklei.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/ernestmicklei",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/ernest-micklei-25ab9a/",
+                        "name": "LinkedIn"
+                    }
+                ]
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Stefan Hogendoorn",
+                "photoUrl": "data/images/organizers/hogendoorn.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/shogendoorn?lang=en",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/stefanhogendoorn/",
+                        "name": "LinkedIn"
+                    }
+                ]
+            },
+            {
+                "gdg": [
+                    "GDG Cloud"
+                ],
+                "name": "Christiaan Hees",
+                "photoUrl": "data/images/organizers/vanhees.jpg",
+                "socials": [
+                    {
+                        "icon": "twitter",
+                        "link": "https://twitter.com/christiaanhees?lang=en",
+                        "name": "Twitter"
+                    },
+                    {
+                        "icon": "linkedin",
+                        "link": "https://www.linkedin.com/in/christiaanhees/",
+                        "name": "LinkedIn"
+                    }
+                ]
+            }
+        ],
+        "title": "GDG Friends"
+    }
+]
