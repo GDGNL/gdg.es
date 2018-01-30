@@ -16,6 +16,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 <link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 <link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html">
 <link rel="import" href="../app-elements/gdgspain-animate-page.html">
 <link rel="import" href="../app-styles.html">
 
@@ -81,6 +82,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         </div>
         <div class="card-actions">
           <paper-button on-tap="_sendSuggestions">Submit</paper-button>
+          <paper-toast id="suggestionToast" text="Thanks for your suggestion! We'll get back to you."></paper-toast>
         </div>
       </paper-card>
 
@@ -93,6 +95,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         </div>
         <div class="card-actions">
           <paper-button on-tap="_sendInvite">Join</paper-button>
+          <paper-toast id="inviteToast" text="Thanks for joining us! You're invite is on its way."></paper-toast>
         </div>
       </paper-card>
     </div>
@@ -135,6 +138,7 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         this.$.emailAddress.value = null;
         this.$.subject.selected = undefined;
         this.$.comment.value = null;
+        this.$.suggestionToast.open();
       },
       _sendInvite: function (e) {
         var firstName = this.$.firstName.value;
@@ -148,6 +152,11 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
           "lastName": lastName,
           "date": date
         });
+
+        this.$.firstName.value = null;
+        this.$.lastName.value = null;
+        this.$.email.value = null;
+        this.$.inviteToast.open();
       }
     });
   </script>
