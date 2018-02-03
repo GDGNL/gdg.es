@@ -5,7 +5,7 @@ const request = require('request');
 
 admin.initializeApp(functions.config().firebase);
 
-exports.sendInvitationRequest = functions.database.ref('/invitationRequests')
+exports.sendInvitationRequest = functions.database.ref('/invitationRequests/{inviteId}')
 .onWrite(event => {
   
   const invitation = event.data.val();
