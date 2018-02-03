@@ -39,7 +39,7 @@
 
     <div class="container posts-container">
       <template is="dom-repeat" items="[[posts]]" as="post" on-dom-change="updateCascadedNodes">
-        <blog-item post="[[post]]"></blog-item>
+        <blog-item post="[[post]]" published="[[post.published]]"></blog-item>
       </template>
     </div>
 

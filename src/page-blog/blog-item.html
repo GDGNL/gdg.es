@@ -8,6 +8,10 @@
     <template>
         <style>
             :host {
+                display: none;
+            }
+
+            :host([published]) {
                 display: block;
                 margin-bottom: 16px;
             }
@@ -171,6 +175,11 @@
                 },
                 link: {
                     type: String
+                },
+                published: {
+                    type: Boolean,
+                    value: false,
+                    reflectToAttribute: true
                 }
             },
 
