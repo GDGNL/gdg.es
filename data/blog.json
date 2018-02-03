@@ -10,7 +10,9 @@
       }
     ],
     "posted": "2018-01-22",
+    "postedTimestamp": -1516579200,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "Zero to ML with Google Cloud Platform"
   },
@@ -25,7 +27,9 @@
       }
     ],
     "posted": "2017-11-18",
+    "postedTimestamp": -1510963200,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "DevFest Netherlands 2017"
   },
@@ -40,7 +44,9 @@
       }
     ],
     "posted": "2017-10-19",
+    "postedTimestamp": -1508371200,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "Google Cloud for Data Scientists and Data Engineers"
   },
@@ -55,7 +61,9 @@
       }
     ],
     "posted": "2017-10-03",
+    "postedTimestamp": -1506988800,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "Istio Launch Edition"
   },
@@ -74,7 +82,9 @@
       }
     ],
     "posted": "2017-09-19",
+    "postedTimestamp": -1505779200,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "Spanner, or \"Let's Break the CAP Theorem\", guest star Reza Rokni"
   },
@@ -89,7 +99,9 @@
       }
     ],
     "posted": "2017-09-07",
+    "postedTimestamp": -1504742400,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "Google Developer Days -Viewing Party"
   },
@@ -104,7 +116,9 @@
       }
     ],
     "posted": "2017-08-22",
+    "postedTimestamp": -1503360000,
     "primaryColor": "transparent",
+    "published": true,
     "secondaryColor": "#00BCD4",
     "title": "\"So how does Tensorflow work?\", guest star Siraj Raval and Mathias Feys"
   }
