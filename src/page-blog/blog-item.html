@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/marked-element/marked-element.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../app-icons.html">
 
@@ -39,8 +40,7 @@
                 @apply(--layout-justify-start);
             }
 
-            .image {
-                height: auto;
+            .image, .markdown img {
                 background: no-repeat 50% 50%;
                 opacity: 0.7;
                 transition: opacity 0.5s;
@@ -49,8 +49,21 @@
                 height: 200px;
             }
 
+            [slot="markdown-html"] img {
+                width: 600px;
+                height: 320px;
+            }
+
+            .markdown {
+                padding-left: 12px;
+            }
+
+            .markdown p, .markdown ul {
+                max-width: 600px;
+            }
+
             .header a {
-                text-decoration:none;
+                text-decoration: none;
             }
 
             .title {
@@ -110,16 +123,21 @@
                     @apply(--layout-horizontal);
                     @apply(--layout-center-justified);
                 }
+
                 .item {
                     @apply(--layout-wrap);
                 }
 
-                .image {
+                .image{
                     width: 260px;
                     height: 140px;
                 }
-            }
 
+                .markdown img {
+                    width: 500px;
+                    height: 250px;
+                }
+            }
 
             @media (max-width: 960px) {
                 .post {
@@ -130,8 +148,33 @@
             }
 
             @media (min-width: 961px) {
-                .post:hover .image {
+                .post:hover .image,
+                .item:hover img {
                     opacity: 1;
+                }
+            }
+
+            /* mobile-small */
+            @media all and (min-width: 0) and (max-width: 360px) and (orientation: portrait) {
+                .markdown img {
+                    width: 300px;
+                    height: 160px;
+                }
+            }
+            /*!* mobile-large *!*/
+            @media all and (min-width: 361px) and (orientation: portrait) {
+                .markdown img {
+                    min-width: 300px;
+                    max-width: 320px;
+                    height: 160px;
+                }
+            }
+            /*!* tablet-small *!*/
+            @media all and (min-width: 600px) and (orientation: portrait) {
+                .markdown img {
+                    width: 600px;
+                    max-width: 600px;
+                    height: 300px;
                 }
             }
         </style>
@@ -143,12 +186,21 @@
                 <div class="posted">[[_toLocaleDate(post.posted)]]</div>
             </div>
             <div class="item">
+                <template is="dom-if" if="[[_useMarkdown(post)]]">
+                    <marked-element>
+                        <div class="markdown" slot="markdown-html"></div>
+                        <script type="text/markdown" src$="[[post.markdown.brief]]"></script>
+                    </marked-element>
+                </template>
                 <div class="text">
-                    <p class="brief">[[post.brief]]</p>
+                    <template is="dom-if" if="[[_useBriefText(post)]]">
+                        <p class="brief">[[post.brief]]</p>
+                    </template>
                 </div>
-                <div image="art">
+                <div image="art" hidden$="[[_useMarkdown(post)]]">
                     <a href="[[link]]" target="_blank">
-                        <iron-image class="image" src="[[post.image]]" style$="background:[[post.primaryColor]];" sizing="contain" preload fade></iron-image>
+                        <iron-image class="image" src="[[post.image]]" style$="background:[[post.primaryColor]];"
+                                    sizing="contain" preload fade></iron-image>
                     </a>
                 </div>
             </div>
@@ -162,8 +214,8 @@
                             </a>
                         </template>
                     </div>
+                </div>
             </template>
-
         </paper-card>
     </template>
     <script>
@@ -183,16 +235,22 @@
                 }
             },
 
-            ready: function() {
-                if (this.post.links.length  > 0) {
+            ready: function () {
+                if (this.post.links.length > 0) {
                     this.link = this.post.links[0].url;
                 }
             },
             _toLocaleDate: function (posted) {
-                return new Date(posted).toLocaleString('nl-NL', { "month": "long", "day": "numeric", "year": "numeric" })
+                return new Date(posted).toLocaleString('nl-NL', {"month": "long", "day": "numeric", "year": "numeric"})
             },
             _hasLinks: function (post) {
                 return post.hasOwnProperty("links");
+            },
+            _useMarkdown: function (post) {
+                return post.hasOwnProperty("markdown");
+            },
+            _useBriefText: function (post) {
+                return !this._useMarkdown(post) && post.hasOwnProperty("brief");
             }
         })
     </script>
