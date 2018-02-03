@@ -45,6 +45,10 @@
                 height: 200px;
             }
 
+            .header a {
+                text-decoration:none;
+            }
+
             .title {
                 @apply(--layout-horizontal);
                 @apply(--layout-start-center);
@@ -129,7 +133,9 @@
         </style>
         <paper-card class="post">
             <div class="header">
-                <div class="title" href$="/blog/posts/[[post.id]]/" class="post" cascaded>[[post.title]]</div>
+                <a href="[[link]]" target="_blank">
+                    <div class="title" href$="/blog/posts/[[post.id]]/" class="post" cascaded>[[post.title]]</div>
+                </a>
                 <div class="posted">[[_toLocaleDate(post.posted)]]</div>
             </div>
             <div class="item">
@@ -137,7 +143,9 @@
                     <p class="brief">[[post.brief]]</p>
                 </div>
                 <div image="art">
-                    <iron-image class="image" src="[[post.image]]" style$="background:[[post.primaryColor]];" sizing="contain" preload fade></iron-image>
+                    <a href="[[link]]" target="_blank">
+                        <iron-image class="image" src="[[post.image]]" style$="background:[[post.primaryColor]];" sizing="contain" preload fade></iron-image>
+                    </a>
                 </div>
             </div>
             <template is="dom-if" if="[[_hasLinks(post)]]">
@@ -160,6 +168,15 @@
             properties: {
                 post: {
                     type: Object
+                },
+                link: {
+                    type: String
+                }
+            },
+
+            ready: function() {
+                if (this.post.links.length  > 0) {
+                    this.link = this.post.links[0].url;
                 }
             },
             _toLocaleDate: function (posted) {
