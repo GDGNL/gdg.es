@@ -1,96 +1,111 @@
 [
   {
-    "id": "how-does-tensorflow-work",
-    "title": "\"So how does Tensorflow work?\", guest star Siraj Raval and Mathias Feys",
-    "posted": "2017-08-22",
-    "primaryColor": "transparent",
-    "secondaryColor": "#00BCD4",
-    "image": "data/images/posts/600_463370705.jpeg",
-    "brief": "Are you ready to learn more about how Tensorflow works and get inspired to take it for a spin? Come for a fun, inspirational, cool talk - accessible for all ranges of expertise.",
+    "brief": "GDG Cloud and Rockstars IT proudly welcome Sara Robinson in the Netherlands with her talk on Zero to ML on GCP  Everyone’s talking about machine learning, but we hear much less about how to put it into practice. And let’s face it, that can be daunting! Even just 10 years ago you needed access to extensive academic and computing resources to make use of machine learning. Fast forward to today and we’ve seen revolutionary changes in the hardware and software that are making ML accessible for any developer or data scientist.  Sara will start with the basics: how to use a pre-trained ML model with one REST API call. Then you’ll learn how to use your own dataset to customize a pre-trained model with transfer learning. We’ll end by learning how to build your own model from scratch with TensorFlow, and how train and serve it in the cloud with GCP. We’ll end with some codelabs!",
+    "id": "ml-2018-1",
+    "image": "https://secure.meetupstatic.com/photos/event/a/4/e/f/highres_467862223.jpeg",
     "links": [
       {
-        "url": "https://www.meetup.com/Google-Developer-Group-Netherlands/events/242224646/",
-        "icon": "meetup"
+        "icon": "web",
+        "url": "https://www.meetup.com/gdgcloudnl/events/247101874/"
       }
-    ]
-  },
-  {
-    "id": "gdd-viewing-party",
-    "title": "Google Developer Days -Viewing Party",
-    "posted": "2017-09-07",
+    ],
+    "posted": "2018-01-22",
     "primaryColor": "transparent",
     "secondaryColor": "#00BCD4",
-    "image": "data/images/posts/BannerGDD.png",
-    "brief": "The United States have Google I/O, Europe now has Google Developer Days! No need to go to Krakow though, in this viewing party we’ll go through the highlights and discuss Google’s announcements in an unconference afterwards. The first GDG event in Rotterdam in a while!",
-    "links": [
-      {
-        "url": "http://gddextended.eventbrite.co.uk/",
-        "icon": "ticket"
-      }
-    ]
+    "title": "Zero to ML with Google Cloud Platform"
   },
   {
-    "id": "lets-break-cap-theorem",
-    "title": "Spanner, or \"Let's Break the CAP Theorem\", guest star Reza Rokni",
-    "posted": "2017-09-19",
-    "primaryColor": "transparent",
-    "secondaryColor": "#00BCD4",
-    "image": "data/images/posts/cloudspanner.png",
-    "brief": "Spanner: Globally replicated, strongly consistent, relational database. Such a thing only exists inside Google! Reza is a Cloud Platform Solution Architect, and our European expert on Spanner. He'll give a talk about how Spanner works under the covers, how you use it in your applications, and the kind of things you can accomplish.",
-    "links": [
-      {
-        "url": "https://www.meetup.com/Google-Developer-Group-Netherlands/events/242556655/",
-        "icon": "meetup"
-      },
-      {
-        "url": "https://photos.app.goo.gl/XCHdIV5MwXO0RBvq2",
-        "icon": "photo"
-      }
-    ]
-  },
-  {
-    "id": "istio-launch-edition",
-    "title": "Istio Launch Edition",
-    "posted": "2017-10-03",
-    "primaryColor": "transparent",
-    "secondaryColor": "#00BCD4",
-    "image": "data/images/posts/istio.png",
-    "brief": "In partnership with Software Circus, GDG Netherlands is honored to announce this event: Software Circus is honored to host the lead engineer of the Google team behind Istio - one of the hottest pieces of software to be released in the last year.",
-    "links": [
-      {
-        "url": "https://www.meetup.com/Software-Circus/events/243518001/?showDescription=true",
-        "icon": "meetup"
-      }
-    ]
-  },
-  {
-    "id": "cloud-for-data-scientist-and-engineers",
-    "title": "Google Cloud for Data Scientists and Data Engineers",
-    "posted": "2017-10-19",
-    "primaryColor": "transparent",
-    "secondaryColor": "#00BCD4",
-    "image": "data/images/posts/gddgdgcloud.png",
-    "brief": "GoDataDriven, Binx and GDG Cloud proudly present the \"Google Cloud for Data Scientists and Data Engineers\" meetup. A true meetup for Data Scientists and Data Engineers, since both speakers are quite active in that area: Machine Learning Specialist Erwin Huizenga (Google) and Data Engineer Constantijn Visinescu (Binx.io) will be the speakers of this session.",
-    "links": [
-      {
-        "url": "https://www.meetup.com/preview/Google-Developer-Group-Netherlands/events/244063935",
-        "icon": "meetup"
-      }
-    ]
-  },
-  {
+    "brief": "The biggest Google tech conference in The Netherlands carefully crafted for you by GDG community, all about Android, Web and Cloud from the world experts! See you on November 18th at Science Park 904 in Amsterdam!",
     "id": "devfest-2017",
-    "title": "DevFest Netherlands 2017",
+    "image": "data/images/posts/devfest2017.png",
+    "links": [
+      {
+        "icon": "web",
+        "url": "https://www.devfest.nl"
+      }
+    ],
     "posted": "2017-11-18",
     "primaryColor": "transparent",
     "secondaryColor": "#00BCD4",
-    "image": "data/images/posts/devfest2017.png",
-    "brief": "The biggest Google tech conference in The Netherlands carefully crafted for you by GDG community, all about Android, Web and Cloud from the world experts! See you on November 18th at Science Park 904 in Amsterdam!",
+    "title": "DevFest Netherlands 2017"
+  },
+  {
+    "brief": "GoDataDriven, Binx and GDG Cloud proudly present the \"Google Cloud for Data Scientists and Data Engineers\" meetup. A true meetup for Data Scientists and Data Engineers, since both speakers are quite active in that area: Machine Learning Specialist Erwin Huizenga (Google) and Data Engineer Constantijn Visinescu (Binx.io) will be the speakers of this session.",
+    "id": "cloud-for-data-scientist-and-engineers",
+    "image": "data/images/posts/gddgdgcloud.png",
     "links": [
       {
-        "url": "https://www.devfest.nl",
-        "icon": "web"
+        "icon": "meetup",
+        "url": "https://www.meetup.com/preview/Google-Developer-Group-Netherlands/events/244063935"
       }
-    ]
+    ],
+    "posted": "2017-10-19",
+    "primaryColor": "transparent",
+    "secondaryColor": "#00BCD4",
+    "title": "Google Cloud for Data Scientists and Data Engineers"
+  },
+  {
+    "brief": "In partnership with Software Circus, GDG Netherlands is honored to announce this event: Software Circus is honored to host the lead engineer of the Google team behind Istio - one of the hottest pieces of software to be released in the last year.",
+    "id": "istio-launch-edition",
+    "image": "data/images/posts/istio.png",
+    "links": [
+      {
+        "icon": "meetup",
+        "url": "https://www.meetup.com/Software-Circus/events/243518001/?showDescription=true"
+      }
+    ],
+    "posted": "2017-10-03",
+    "primaryColor": "transparent",
+    "secondaryColor": "#00BCD4",
+    "title": "Istio Launch Edition"
+  },
+  {
+    "brief": "Spanner: Globally replicated, strongly consistent, relational database. Such a thing only exists inside Google! Reza is a Cloud Platform Solution Architect, and our European expert on Spanner. He'll give a talk about how Spanner works under the covers, how you use it in your applications, and the kind of things you can accomplish.",
+    "id": "lets-break-cap-theorem",
+    "image": "data/images/posts/cloudspanner.png",
+    "links": [
+      {
+        "icon": "meetup",
+        "url": "https://www.meetup.com/Google-Developer-Group-Netherlands/events/242556655/"
+      },
+      {
+        "icon": "photo",
+        "url": "https://photos.app.goo.gl/XCHdIV5MwXO0RBvq2"
+      }
+    ],
+    "posted": "2017-09-19",
+    "primaryColor": "transparent",
+    "secondaryColor": "#00BCD4",
+    "title": "Spanner, or \"Let's Break the CAP Theorem\", guest star Reza Rokni"
+  },
+  {
+    "brief": "The United States have Google I/O, Europe now has Google Developer Days! No need to go to Krakow though, in this viewing party we’ll go through the highlights and discuss Google’s announcements in an unconference afterwards. The first GDG event in Rotterdam in a while!",
+    "id": "gdd-viewing-party",
+    "image": "data/images/posts/BannerGDD.png",
+    "links": [
+      {
+        "icon": "ticket",
+        "url": "http://gddextended.eventbrite.co.uk/"
+      }
+    ],
+    "posted": "2017-09-07",
+    "primaryColor": "transparent",
+    "secondaryColor": "#00BCD4",
+    "title": "Google Developer Days -Viewing Party"
+  },
+  {
+    "brief": "Are you ready to learn more about how Tensorflow works and get inspired to take it for a spin? Come for a fun, inspirational, cool talk - accessible for all ranges of expertise.",
+    "id": "how-does-tensorflow-work",
+    "image": "data/images/posts/600_463370705.jpeg",
+    "links": [
+      {
+        "icon": "meetup",
+        "url": "https://www.meetup.com/Google-Developer-Group-Netherlands/events/242224646/"
+      }
+    ],
+    "posted": "2017-08-22",
+    "primaryColor": "transparent",
+    "secondaryColor": "#00BCD4",
+    "title": "\"So how does Tensorflow work?\", guest star Siraj Raval and Mathias Feys"
   }
 ]
