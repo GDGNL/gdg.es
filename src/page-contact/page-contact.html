@@ -34,6 +34,9 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         margin-bottom: 16px;
       }
 
+      p {
+        min-width: 200px;
+      }
 
       header {
         @apply --layout-horizontal;
@@ -50,11 +53,20 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
         @apply --layout-flex;
         @apply --layout-start-justified;
       }
-
+      a {
+        color: black;
+        text-decoration: none;
+      }
       .card-actions {
         @apply --layout;
         @apply --layout-flex;
         @apply --layout-end-justified;
+      }
+
+      @media all and (min-width: 600px)  {
+        p {
+          width: 600px;
+        }
       }
     </style>
 
@@ -88,14 +100,13 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 
       <paper-card heading="Slack" image="" elevation="1" animated-shadow="false">
         <div class="card-content">
-          <p>Join us on Slack! Fill in your name and email address and you'll find an invitation in your inbox.</p>
-          <paper-input id="firstName" label="First name"></paper-input>
-          <paper-input id="lastName" label="Last name"></paper-input>
-          <paper-input id="email" label="Email address" type="email"></paper-input>
+          <p>Join us on Slack! Joining is easy.</p>
+          <p>Simply complete the form and you'll be invited to our Slack.</p>
         </div>
         <div class="card-actions">
-          <paper-button on-tap="_sendInvite">Join</paper-button>
-          <paper-toast id="inviteToast" text="Thanks for joining us! You're invite is on its way."></paper-toast>
+          <a href="https://join.slack.com/t/gdg-nl/shared_invite/enQtMzEwOTA4NDU5MzkyLWFjOWUzNDc1MDM4OTNkN2ZlZWI2MWIzZGE5NGU1MTE0NDc5NzQ4ZjRiN2ZmNDJkNGFkMDQ3MjkwYzYwYWQ0ZDM" target="_blank">
+            <paper-button>Join</paper-button>
+          </a>
         </div>
       </paper-card>
     </div>
