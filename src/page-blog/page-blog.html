@@ -15,76 +15,75 @@ This code may only be used under the MIT style license found at http://gdg.es/LI
 <link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
 <link rel="import" href="../app-styles.html">
 <link rel="import" href="blog-list.html">
+<link rel="import" href="../elements/mailinglist-button/mailinglist-button.html">
 
 <dom-module id="page-blog">
-  <template>
-    <style include="app-styles">
-      :host {
-        @apply --page-content;
+    <template>
+        <style include="app-styles">
+            :host {
+                @apply --page-content;
 
-        display: block;
-      }
+                display: block;
+            }
 
-      header {
-        @apply --layout-horizontal;
-        @apply --layout-center;
-      }
+            header {
+                @apply --layout-horizontal;
+                @apply --layout-center;
+            }
 
-      h1 {
-        @apply --layout;
-        @apply --layout-flex;
-      }
-      a {
-        text-decoration: none;        
-      }
+            h1 {
+                @apply --layout;
+                @apply --layout-flex;
+            }
 
-      a paper-button {
-        color: black;
-        text-decoration: none;
-        background: white;
-      }
-    </style>
+            a {
+                text-decoration: none;
+            }
 
-    <firebase-query 
-        path="/blogs" 
-        data="{{blogs}}"
-        order-by-child="postedTimestamp">
-    </firebase-query>
+            a paper-button {
+                color: black;
+                text-decoration: none;
+                background: white;
+            }
+        </style>
 
-    <header>
-      <h1>Blog</h1>
-    </header>
-    <div>
-      <p>Would you like to receive our latest updates?
-      <a href="https://groups.google.com/forum/?fromgroups#!forum/dutch-gtug" target="_blank">
-        <paper-button raised>Join our mailing list</paper-button></a></p>
-    <blog-list posts=[[blogs]]></blog-list>
-  </template>
+        <firebase-query
+                path="/blogs"
+                data="{{blogs}}"
+                order-by-child="postedTimestamp">
+        </firebase-query>
 
-  <script>
-    Polymer({
-      is: 'page-blog',
+        <header>
+            <h1>Blog</h1>
+        </header>
+        <mailinglist-button></mailinglist-button>
+        <blog-list posts=[[blogs]]></blog-list>
+    </template>
 
-      properties: {
-        visible: {
-          type: Boolean,
-          observer: '_visibleChanged'
-        },
-        posts: {
-          type: Array
-        }
-      },
+    <script>
+        Polymer({
+            is: 'page-blog',
 
-      behaviors: [
-        Polymer.GDGSpainAnimatePage
-      ],
-      _visibleChanged: function (visible) {
-        if (visible) {
-          this.fire('change-section', {
-            title: 'Blog - GDG NL'
-          });
-        }
-      }
-    });
-  </script>
+            properties: {
+                visible: {
+                    type: Boolean,
+                    observer: '_visibleChanged'
+                },
+                posts: {
+                    type: Array
+                }
+            },
+
+            behaviors: [
+                Polymer.GDGSpainAnimatePage
+            ],
+            _visibleChanged: function (visible) {
+                if (visible) {
+                    this.fire('change-section', {
+                        title: 'Blog - GDG NL'
+                    });
+                }
+            }
+        });
+    </script>
 </dom-module>

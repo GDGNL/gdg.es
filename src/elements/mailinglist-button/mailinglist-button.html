@@ -1,0 +1,30 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="mailinglist-button">
+    <template>
+        <style include="app-styles">
+            a {
+                text-decoration: none;
+            }
+
+            a paper-button {
+                color: black;
+                text-decoration: none;
+                background: white;
+            }
+        </style>
+        <div>
+            <p>Would you like to receive our latest updates?
+                <a href="https://groups.google.com/forum/?fromgroups#!forum/dutch-gtug" target="_blank">
+                    <paper-button raised>Join our mailing list</paper-button>
+                </a>
+            </p>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: "mailinglist-button"
+        })
+    </script>
+</dom-module>
