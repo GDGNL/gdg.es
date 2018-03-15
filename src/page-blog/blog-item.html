@@ -213,6 +213,15 @@
                                 <paper-icon-button icon="[[link.icon]]"></paper-icon-button>
                             </a>
                         </template>
+                        <a target="_blank" href$="[[_getTwitterShareUrl(post)]]">
+                            <paper-icon-button  icon="icons:twitter"></paper-icon-button>
+                        </a>
+                        <a target="_blank" href$="https://www.facebook.com/sharer/sharer.php?u=[[url]]">
+                            <paper-icon-button  icon="icons:facebook"></paper-icon-button>
+                        </a>
+                        <a target="_blank" href$="https://plus.google.com/share?url=[[url]]">
+                            <paper-icon-button  icon="icons:gplus"></paper-icon-button>
+                        </a>
                     </div>
                 </div>
             </template>
@@ -232,6 +241,14 @@
                     type: Boolean,
                     value: false,
                     reflectToAttribute: true
+                },
+                url : {
+                    type: String,
+                    value: "https://gdgnetherlands.org/blog"
+                },
+                sharingText: {
+                    type: String,
+                    value: "Check out this amount blog on GDG NL"
                 }
             },
 
@@ -251,6 +268,9 @@
             },
             _useBriefText: function (post) {
                 return !this._useMarkdown(post) && post.hasOwnProperty("brief");
+            },
+            _getTwitterShareUrl: function(post) {
+                return "http://twitter.com/intent/tweet?url=" + this.url+ "&text=Check out the GDG NL blog " + post.title + " on ";
             }
         })
     </script>
